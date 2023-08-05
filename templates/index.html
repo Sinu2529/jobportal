@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+<script>
+    function myFunction() {
+    alert("Successfully message has been send");
+}
+</script>
+</head>
+<body>
+   
+
+<header class="header">
+
+    <a href="#" class="logo"><span>Job</span>Portal</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#jobs">service</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+        <button type="button" class="btn btn-dark">Register</button>
+
+    </nav>
+   
+</header>
+
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>success doesn't come to you, <span> you go to it </span></h3>
+    </div>
+    <div>
+        <img src="static/images/1.jpg" alt="">
+    </div>
+</section>
+
+
+<section class="service" id="service">
+
+    <h1 class="heading"> Jobs <span>you need</span> </h1>
+
+    <div class="box-container">
+        {% for n in jobsdata %}
+
+        <div class="box">
+            
+           
+            <a href><h3>{{n.title}}</h3></a>
+            <p>{{n.desp}}</p>
+            <p>Job Type: {{n.job_type}}</p>
+            <p>Stiped: {{n.stipend}}</p>
+            <button type="button" class="btn btn-dark">Apply</button>
+
+            
+        </div>
+
+        {% endfor%}
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h1 class="heading"><span>about</span> us </h1>
+    
+    <div class="row">
+
+        <div class="content">
+            <h3>We can help you find training, support, and jobs to help you change your life. Learn More Right Now! Generation Worldwide prepares, places, and supports people in life-changing careers. Careers that can change your life. Locate a Programme Near You. Join Our Team Today.</h3>
+            
+            <a href="#contact" class="btn">contact us</a>
+        </div>
+    
+    </div>
+    
+    </section>
+
+    <section class="reivew" id="review">     
+        <h1 class="heading">customer<span>review</span></h1>    
+        <div class="box">
+            <div class="user">
+                <img src="images/p2.png" alt="">
+                <div class="user-info">
+                    <h5>Mr.Deol</h5>
+                </div>
+            </div>
+            <p>Perfect!
+    Thanks, this is exactly what I was looking for.! </p>
+        </div>
+    </section> 
+    
+ 
+    
+    
+    <section class="contact" id="contact">
+    
+        <h1 class="heading"> <span>contact</span> us </h1>
+    
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number">
+                <input type="text" placeholder="subject">
+            </div>
+            <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn" onclick="myFunction()">
+        </form>
+    
+    </section>
+    
+
+
+
+
+
+
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>branches</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> jogeshwari </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> goregaon </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> navi mumbai </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> andheri </a>
+        </div>
+
+        
+    </div>
+
+    <div class="credit"></span> | all rights reserved </div>
+
+</section>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
+
